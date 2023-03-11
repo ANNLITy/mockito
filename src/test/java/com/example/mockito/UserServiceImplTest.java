@@ -13,7 +13,7 @@ import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class UserServiceImplTest {
-    private final User user = new User("Андрей");
+
     private final User trueUser = new User("Андрей");
     private final User falseUser = new User("324323");
 
@@ -25,7 +25,7 @@ class UserServiceImplTest {
 
     @Test
     void shouldReturnTrue() {
-        when(userDaoMock.getByName(trueUser.getName())).thenReturn(user);
+        when(userDaoMock.getByName(trueUser.getName())).thenReturn(trueUser);
         assertTrue(out.checkUserExist(trueUser));
         verify(userDaoMock, times(1)).getByName(trueUser.getName());
     }

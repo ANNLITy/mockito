@@ -8,7 +8,7 @@ class UserDaoImplTest {
 
     private final User falseUser = new User("1");
 
-    private final UserDaoImpl userDao;
+    private final UserDao userDao;
 
     UserDaoImplTest() {
         this.userDao = new UserDaoImpl();
